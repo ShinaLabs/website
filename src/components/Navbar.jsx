@@ -1,6 +1,5 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-
 import { background, openai } from "../assets";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
@@ -9,36 +8,59 @@ import { useState } from "react";
 const navigation = [
     {
         id: "0",
-        title: "Features",
-        url: "#features",
+        title: "HOME",
+        url: "#Home",
     },
     {
         id: "1",
-        title: "Pricing",
-        url: "#pricing",
+        title: "ABOUT US",
+        url: "./Footer",
     },
     {
         id: "2",
-        title: "How to use",
-        url: "#how-to-use",
+        title: "NEWS",
+        url: "#news",
     },
     {
         id: "3",
-        title: "Roadmap",
-        url: "#roadmap",
+        title: "PRODUCTS",
+        url: "#products",
     },
     {
         id: "4",
-        title: "New account",
-        url: "#signup",
-        onlyMobile: true,
+        title: "CLIENTS",
+        url: "#clients",
     },
     {
         id: "5",
-        title: "Sign in",
-        url: "#login",
-        onlyMobile: true,
+        title: "TECHNOLOGY",
+        url: "#technology",
     },
+    {
+        id: "6",
+        title: "SERVICES",
+        url: "#services",
+        
+    },
+    {
+        id: "7",
+        title: "CONTACT US",
+        url: "#contact us",
+        
+    },
+    {
+        id: "8",
+        title: "BLOGS",
+        url: "#blogs",
+        
+    },
+    {
+        id: "8",
+        title: "CAREERS",
+        url: "#careers",
+        
+    },
+
 ];
 
 const Header = () => {
@@ -104,18 +126,19 @@ const Header = () => {
                     </div>
                 </nav>
 
-                <a href="#signup" className="button hidden mr-8 text-white/50 transition-colors hover:text-white lg:block">
-                    New account
-                </a>
+                {/* <a href="#signup" className="button hidden mr-8 text-white/50 transition-colors hover:text-white lg:block">
+                    New account */}
+                {/* </a>
                 <Button className="hidden lg:flex" href="#login">
                     Sign in
                 </Button>
 
                 <Button className="ml-auto lg:hidden" onClick={toggleNavigation}>
                     <MenuSvg openNavigation={openNavigation} />
-                </Button>
+                </Button> */}
             </div>
         </div>
+        
     );
 };
 

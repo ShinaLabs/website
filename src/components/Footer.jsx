@@ -4,9 +4,9 @@ import { discordBlack, facebook, instagram, telegram, twitter } from "../assets"
 
 const socials = [
     {
-        title: "LinkedIN",
+        title: "Discord",
         iconUrl: discordBlack,
-        url: "https://www.linkedin.com/company/ShinaLabs",
+        url: "https://discord.gg/zvdJzX6V",
     },
     {
         title: "Twitter",
