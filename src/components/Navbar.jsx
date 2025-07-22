@@ -4,6 +4,7 @@ import { background, openai } from "../assets";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { useState } from "react";
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa"; // Importing icons
 
 const navigation = [
     {
@@ -40,27 +41,28 @@ const navigation = [
         id: "6",
         title: "SERVICES",
         url: "#services",
-        
     },
     {
         id: "7",
         title: "CONTACT US",
         url: "#contact us",
-        
     },
     {
         id: "8",
         title: "BLOGS",
         url: "#blogs",
-        
     },
     {
-        id: "8",
+        id: "9",
         title: "CAREERS",
         url: "#careers",
-        
     },
-
+    {
+        id: "10",
+        title: "REFER AND EARN",
+        url: "#refer and earn",
+        onlyMobile: true,
+    },
 ];
 
 const Header = () => {
@@ -85,11 +87,31 @@ const Header = () => {
     };
 
     return (
-        <div className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}>
-            <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+        <div className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}>
+            <div className="flex flex-col lg:flex-row items-center justify-between px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
                 <a className="block w-[12rem] xl:mr-8" href="#hero">
                     <img src={openai} width={250} height={40} alt="OpenAI" />
                 </a>
+
+                {/* Contact Numbers and Social Media Links */}
+                <div className="flex items-center justify-between w-full lg:w-auto space-x-4 py-2 bg-n-8">
+                    <div className="text-white text-xs">
+                        <span>+919682302290</span>
+                        <span> | </span>
+                        <span>contact@shinalabs.com</span>
+                    </div>
+                    <div className="flex space-x-2">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white text-xs">
+                            <FaFacebookF />
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-white text-xs">
+                            <FaTwitter />
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white text-xs">
+                            <FaLinkedinIn />
+                        </a>
+                    </div>
+                </div>
 
                 <nav className={`${openNavigation ? "flex" : "hidden"} fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>
                     <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
@@ -98,7 +120,7 @@ const Header = () => {
                                 key={item.id}
                                 href={item.url}
                                 onClick={handleClick}
-                                className={`block relative font-code text-2xl uppercase text-white transition-colors hover:text-color-1 ${item.onlyMobile ? "lg:hidden" : ""} px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                                className={`block relative font-code text-lg uppercase text-white transition-colors hover:text-color-1 ${item.onlyMobile ? "lg:hidden" : ""} px-6 py-4 md:py-6 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                                     item.url === pathname.hash ? "z-2 lg:text-white" : "lg:text-white/50"
                                 } lg:leading-5 lg:hover:text-white xl:px-12`}
                             >
@@ -125,20 +147,8 @@ const Header = () => {
                         <div className="absolute top-[26.8rem] left-12 w-6 h-6 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full"></div>
                     </div>
                 </nav>
-
-                {/* <a href="#signup" className="button hidden mr-8 text-white/50 transition-colors hover:text-white lg:block">
-                    New account */}
-                {/* </a>
-                <Button className="hidden lg:flex" href="#login">
-                    Sign in
-                </Button>
-
-                <Button className="ml-auto lg:hidden" onClick={toggleNavigation}>
-                    <MenuSvg openNavigation={openNavigation} />
-                </Button> */}
             </div>
         </div>
-        
     );
 };
 
