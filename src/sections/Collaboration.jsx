@@ -3,12 +3,13 @@ import Button from "../components/Button";
 import Section from "../components/Section";
 
 const collabContent = [
-    {
-        title: "Seamless Integration",
-        text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
-    },
-    { title: "Smart Automation" },
-    { title: "Top-notch Security" },
+    { title: "TECHNOLOGY" },
+    { title: "HEALTHCARE" },
+    { title: "TRAVEL" },
+    { title: "ECOMMERCE" },
+    { title: "BANKING" },
+    { title: "EDUCATION" },
+    { title: "MANUFACTURING" },
 ];
 
 const collabApps = [
@@ -67,7 +68,7 @@ const Collaboration = () => {
         <Section crosses>
             <div className="container lg:flex">
                 <div className="max-w-[25rem]">
-                    <h2 className="h2 mb-4 md:mb-8">AI Chat App for seamless collaboration</h2>
+                    <h2 className="h2 mb-4 md:mb-8">INDUSTRIES</h2>
 
                     <ul className="max-w-[22rem] mb-10 md:mb-14">
                         {collabContent.map((item, i) => (
@@ -82,13 +83,13 @@ const Collaboration = () => {
                     </ul>
 
                     <Button>
-                        Try it now
+                        Hire a Team
                     </Button>
 
                 </div>
 
                 <div className="lg:ml-auto xl:w-[38rem] mt-4">
-                    <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.</p>
+                    <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">Industries We Empower with Innovation</p>
 
                     <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
                         <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">

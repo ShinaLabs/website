@@ -7,10 +7,11 @@ import { useState } from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa"; // Importing icons
 
 const navigation = [
-    {
+    {                   // ADD AN ANCHOR TAG TO THE NAVIGATION
         id: "0",
         title: "HOME",
         url: "#Home",
+        
     },
     {
         id: "1",
@@ -68,6 +69,7 @@ const navigation = [
 const Header = () => {
     const pathname = useLocation();
     const [openNavigation, setOpenNavigation] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const toggleNavigation = () => {
         if (openNavigation) {
@@ -84,6 +86,10 @@ const Header = () => {
 
         enablePageScroll();
         setOpenNavigation(false);
+    };
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
     };
 
     return (
@@ -111,6 +117,26 @@ const Header = () => {
                             <FaLinkedinIn />
                         </a>
                     </div>
+                </div>
+
+                <div className="relative">
+                    <button onClick={toggleDropdown} className="text-white text-lg lg:hidden">
+                        <MenuSvg openNavigation={openNavigation} />
+                    </button>
+                    {dropdownOpen && (
+                        <div className="absolute right-0 mt-2 w-48 bg-n-8 rounded-md shadow-lg z-10">
+                            {navigation.map((item) => (
+                                <a
+                                    key={item.id}
+                                    href={item.url}
+                                    onClick={handleClick}
+                                    className={`block px-4 py-2 text-white hover:bg-n-7`}
+                                >
+                                    {item.title}
+                                </a>
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 <nav className={`${openNavigation ? "flex" : "hidden"} fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>

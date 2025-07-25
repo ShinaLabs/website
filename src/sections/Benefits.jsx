@@ -6,45 +6,45 @@ import { benefitIcon1, benefitIcon2, benefitIcon3, benefitIcon4, benefitImage2 }
 
 const benefits = [
     {
-        title: "Ask anything",
-        text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+        title: "WEBSITE DEVELOPMENT",
+        text: "We build websites that work — fast, responsive, and tailored to your brand.Whether it's a landing page or a full-scale platform, we craft digital experiences that convert and perform on every device.",
         backgroundUrl: "./src/assets/benefits/card-1.svg",
         iconUrl: benefitIcon1,
         imageUrl: benefitImage2,
     },
     {
-        title: "Improve everyday",
-        text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+        title: "DATA SCIENCE",
+        text: "We turn raw data into smart decisions.From data cleaning and analysis to predictive modeling and AI — we uncover insights that drive real business growth.",
         backgroundUrl: "./src/assets/benefits/card-2.svg",
         iconUrl: benefitIcon2,
         imageUrl: benefitImage2,
         light: true,
     },
     {
-        title: "Connect everywhere",
-        text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+        title: "UI/UX DESIGNINIG",
+        text: "Designs that feel as good as they look.We blend creativity and usability to deliver seamless digital experiences across web and mobile.",
         backgroundUrl: "./src/assets/benefits/card-3.svg",
         iconUrl: benefitIcon3,
         imageUrl: benefitImage2,
     },
     {
-        title: "Fast responding",
-        text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+        title: "DIGITAL MARKETING",
+        text: "We help you get seen, heard, and remembered.From SEO and social media to performance ads and content strategy — we drive traffic, build trust, and grow your brand online.",
         backgroundUrl: "./src/assets/benefits/card-4.svg",
         iconUrl: benefitIcon4,
         imageUrl: benefitImage2,
         light: true,
     },
     {
-        title: "Ask anything",
-        text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+        title: "CRM SOFTWARE DEVELOPMENT",
+        text: "We build smart CRM systems that help you connect better.From lead tracking to customer engagement and automation — our solutions simplify sales, boost retention, and grow relationships that last.",
         backgroundUrl: "./src/assets/benefits/card-5.svg",
         iconUrl: benefitIcon1,
         imageUrl: benefitImage2,
     },
     {
-        title: "Improve everyday",
-        text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+        title: "APP DEVELOPMENT",
+        text: "We turn ideas into intuitive, high-performance apps.From concept to launch — we build mobile experiences that engage, scale, and deliver results across iOS and Android.",
         backgroundUrl: "./src/assets/benefits/card-6.svg",
         iconUrl: benefitIcon2,
         imageUrl: benefitImage2,
@@ -55,7 +55,7 @@ const Benefits = () => {
     return (
         <Section id="features">
             <div className="container relative z-2">
-                <Heading className="md:max-w-md lg:max-w-2xl" title="Chat Smarter, Not Harder with OpenAI" />
+                <Heading className="md:max-w-md lg:max-w-2xl" title="SERVICES" />
 
                 <div className="flex flex-wrap gap-10 mb-10">
                     {benefits.map((item, i) => (

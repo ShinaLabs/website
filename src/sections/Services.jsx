@@ -9,7 +9,7 @@ const Services = () => {
     return (
         <Section id="how-to-use">
             <div className="container">
-                <Heading title="Generative AI made for creators." text="OpenAI unlocks the potential of AI-powered applications" />
+                <Heading title="MILESTONES" text="EVERY STEP FORWARD, A STORY OF PROGRESS" />
 
                 <div className="relative">
                     <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-white/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
@@ -18,27 +18,33 @@ const Services = () => {
                         </div>
 
                         <div className="relative z-1 max-w-[17rem] ml-auto">
-                            <h4 className="h4 mb-4">Smartest AI</h4>
-                            <p className="body-2 mb-[3rem] text-n-3">OpenAI unlocks the potential of AI-powered applications</p>
                             <ul className="body-2">
                                 <li className="flex items-start py-4 border-t border-n-6">
                                     <img width={24} height={24} src={check} />
-                                    <p className="ml-4">Photo generating</p>
+                                    <p className="ml-4">5+ Years Of Experince</p>
                                 </li>
                                 <li className="flex items-start py-4 border-t border-n-6">
                                     <img width={24} height={24} src={check} />
-                                    <p className="ml-4">Photo enhance</p>
+                                    <p className="ml-4">10+ Projects Delivered</p>
                                 </li>
                                 <li className="flex items-start py-4 border-t border-n-6">
                                     <img width={24} height={24} src={check} />
-                                    <p className="ml-4">Seamless Integration</p>
+                                    <p className="ml-4">25+ HAPPY CUSTOMERS</p>
+                                </li>
+                                <li className="flex items-start py-4 border-t border-n-6">
+                                    <img width={24} height={24} src={check} />
+                                    <p className="ml-4">Industries Covered: EdTech, HealthTech, Retail, etc.</p>
+                                </li>
+                                <li className="flex items-start py-4 border-t border-n-6">
+                                    <img width={24} height={24} src={check} />
+                                    <p className="ml-4">Registered as a Private Limited Company</p>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="flex items-center h-[3.5rem] px-6 bg-n-8/80 rounded-[1.7rem] absolute left-4 right-4 bottom-4 border-white/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2 text-base">
                             <img className="w-5 h-5 mr-4" src={loading} alt="" />
-                            AI is generating
+                            Defining Moments That Shaped Our Journey...
                         </div>
                     </div>
 
@@ -49,13 +55,8 @@ const Services = () => {
                             </div>
 
                             <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                                <h4 className="h4 mb-4">Photo editing</h4>
-                                <p className="body-2 mb-[3rem] text-n-3">Automatically enhance your photos using our AI app&apos;s photo editing feature. Try it now!</p>
-                            </div>
-
-                            <div className="absolute top-8 right-8 max-w-[17.5rem] py-6 px-8 bg-black rounded-t-xl rounded-bl-xl font-code text-base lg:top-16 lg:right-[8.75rem] lg:max-w-[17.5rem]">
-                                Hey OpenAI, enhance this photo
-                                <ChatBubbleWing className="absolute left-full bottom-0" />
+                                <h4 className="h4 mb-4">TESTIMONIALS</h4>
+                                <p className="body-2 mb-[3rem] text-n-3">"Working with Shina Labs has been a game-changer for our business. Their team understood our vision from day one and translated it into a sleek, high-performing product. What stood out the most was their attention to detail, clear communication, and genuine commitment to our success. We look forward to partnering with them again!"— Manzoor Ahmad Bhat, Founder and CEO, Bhat Medicate</p>
                             </div>
                         </div>
 

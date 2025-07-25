@@ -1,5 +1,4 @@
 // Hero Section
-export { default as curve } from './hero/curve.png';
 export { default as robot } from './hero/robot.jpg';
 export { default as heroBackground } from './hero/hero-background.jpg';
 
