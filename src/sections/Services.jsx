@@ -50,50 +50,57 @@ const Services = () => {
 
                     <div className="relative z-1 grid gap-5 lg:grid-cols-2">
                         <div className="relative min-h-[39rem] border border-white/10 rounded-3xl overflow-hidden">
-                            <div className="absolute inset-0">
-                                <img src={service2} className="h-full w-full object-cover" width={630} height={750} alt="" />
-                            </div>
-
+                            
                             <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                                <h4 className="h4 mb-4">TESTIMONIALS</h4>
-                                <p className="body-2 mb-[3rem] text-n-3">"Working with Shina Labs has been a game-changer for our business. Their team understood our vision from day one and translated it into a sleek, high-performing product. What stood out the most was their attention to detail, clear communication, and genuine commitment to our success. We look forward to partnering with them again!"— Manzoor Ahmad Bhat, Founder and CEO, Bhat Medicate</p>
+                                <h4 className="h4 mb-4">What is Digital Transformation</h4>
+                                <ul className="body-2">
+                                    <li className="flex items-start py-4 border-t border-n-6">
+                                        <img width={24} height={24} src={check} />
+                                        <p className="ml-4">Increasing technological and customer evolution is compelling organizations to stay agile, innovative, and transparent. </p>
+                                    </li>
+                                    <li className="flex items-start py-4 border-t border-n-6">
+                                        <img width={24} height={24} src={check} />
+                                        <p className="ml-4">Digital transformation enables companies to integrate digital technology into every aspect of their business, resulting in significant changes to the way they operate and deliver value to their customers. The process facilitates the digitalization of existing traditional processes by gathering, analyzing, and leveraging data in real time to optimize processes, automate systems, and propel innovation. </p>
+                                    </li>
+                                    <li className="flex items-start py-4 border-t border-n-6">
+                                        <img width={24} height={24} src={check} />
+                                        <p className="ml-4">With years of experience and wide-ranging expertise in technologies like AI, IoT, and Data Analytics, we help you transform into a true Digital Enterprise. Our smart digital transformation solutions enable you to harness the unlimited power of data by obtaining valuable insights to meet the ever-evolving customer needs and facilitate strategic decision-making. </p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
 
                         <div className="p-4 bg-[#15131D] rounded-3xl overflow-hidden lg:min-h-[46rem]">
                             <div className="py-12 px-4 xl:px-8">
-                                <h4 className="h4 mb-4">Video generation</h4>
-                                <p className="body-2 mb-[2rem] text-n-3">The world’s most powerful AI photo and video art generation engine. What will you create?</p>
+                                <h4 className="h4 mb-4">Why Your Business Needs Digital Transformation</h4>
+                                <p className="body-2 mb-[2rem] text-n-3">Our digital transformation service consultants help you unlock the prominent benefits of digitalization.</p>
 
-                                <ul className="flex items-center justify-between">
-                                    {openaiServicesIcons.map((item, index) => (
-                                        <li key={index} className={`rounded-2xl flex items-center justify-center ${index === 2 ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]" : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"}`}>
-                                            <div className={index === 2 ? "flex items-center justify-center w-full h-full bg-[#15131D] rounded-[1rem]" : ""}>
-                                                <img src={item} width={24} height={24} alt="" />
-                                            </div>
-                                        </li>
-                                    ))}
+                                <ul className="body-2">
+                                    <li className="flex items-start py-4 border-t border-n-6">
+                                        <img width={24} height={24} src={check} />
+                                        <p className="ml-4">Create new revenue streams for your business</p>
+                                    </li>
+                                    <li className="flex items-start py-4 border-t border-n-6">
+                                        <img width={24} height={24} src={check} />
+                                        <p className="ml-4">Increase efficiency and optimize business processes to drive innovation</p>
+                                    </li>
+                                    <li className="flex items-start py-4 border-t border-n-6">
+                                        <img width={24} height={24} src={check} />
+                                        <p className="ml-4">Empower business employees and boost workforce productivity</p>
+                                    </li>
+                                    <li className="flex items-start py-4 border-t border-n-6">
+                                        <img width={24} height={24} src={check} />
+                                        <p className="ml-4">Reduce operational costs and mitigate risks with strategic decision-making</p>
+                                    </li>
+                                    <li className="flex items-start py-4 border-t border-n-6">
+                                        <img width={24} height={24} src={check} />
+                                        <p className="ml-4">Redefine how you engage with your clientele</p>
+                                    </li>
+                                    <li className="flex items-start py-4 border-t border-n-6">
+                                        <img width={24} height={24} src={check} />
+                                        <p className="ml-4">Become more receptive and responsive to evolving market trends</p>
+                                    </li>
                                 </ul>
-                            </div>
-
-                            <div className="relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]">
-                                <img src={service3} className="w-full h-full object-cover" width={520} height={400} alt="" />
-
-                                <div className="absolute top-8 left-[3.125rem] w-full max-w-[14rem] pt-2.5 pr-2.5 pb-7 pl-5 bg-n-6 rounded-t-xl rounded-br-xl font-code text-base md:max-w-[17.5rem]">
-                                    Video generated!
-                                    <div className="absolute left-5 -bottom-[1.125rem] flex items-center justify-center w-[2.25rem] h-[2.25rem] bg-color-1 rounded-[0.75rem]">
-                                        <img src={openaiWhiteSymbol} width={26} height={26} alt="OpenAI" />
-                                    </div>
-                                    <p className="tagline absolute right-2.5 bottom-1 text-[0.625rem] text-n-3 uppercase">just now</p>
-                                    <ChatBubbleWing className="absolute right-full bottom-0 -scale-x-100" pathClassName="fill-n-6" />
-                                </div>
-                                <div className="absolute left-0 bottom-0 w-full flex items-center p-6">
-                                    <img src={play} width={24} height={24} alt="" className="object-contain mr-3" />
-
-                                    <div className="flex-1 bg-[#D9D9D9]">
-                                        <div className="w-1/2 h-0.5 bg-color-1"></div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

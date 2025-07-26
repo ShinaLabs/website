@@ -5,22 +5,19 @@ import Button from "../components/Button";
 
 const pricing = [
     {
-        title: "Basic",
-        description: "AI chatbot, personalized recommendations",
-        price: "0",
-        features: ["An AI chatbot that can understand your queries", "Personalized recommendations based on your preferences", "Ability to explore the app and its features without any cost"],
+        title: "🌐 Explore Our Full Stack Expertise",
+        description: "Get a firsthand experience of how we build scalable, end-to-end digital solutions.Gain access to a fully functional, no-cost demo of our full stack capabilities. From dynamic front-end interfaces to robust back-end systems, we’ll show you how we transform ideas into responsive, high-performance web applications.",
+        features: ["🔹 Experience intuitive UI/UX design in action", "🔹 Understand how our APIs and databases work behind the scenes" , "🔹 Explore core app features and flows" , "🔹Perfect for MVP trials, startup demos, or tech evaluation"],
     },
     {
-        title: "Premium",
-        description: "Advanced AI chatbot, priority support, analytics dashboard",
-        price: "9.99",
-        features: ["An advanced AI chatbot that can understand complex queries", "An analytics dashboard to track your conversations", "Priority support to solve issues quickly"],
+        title: "📊 Discover the Power of Data",
+        description: "Unlock smarter decisions with our Data Science & Analytics capabilities.Dive into a hands-on experience where we show how raw data transforms into meaningful insights and intelligent actions. From predictive modeling to dashboard visualizations, explore how we blend data science with analytics to drive business value.",
+        features: ["🔹 Visualize trends through interactive dashboards and reports", "🔹 Understand how machine learning models can forecast outcomes" ,"🔹 Explore real-world data pipelines, preprocessing, and pattern detection" ,"🔹 Ideal for businesses seeking insight-driven growth and automation"],
     },
     {
-        title: "Enterprise",
-        description: "Custom AI chatbot, advanced analytics, dedicated account",
-        price: null,
-        features: ["An AI chatbot that can understand your queries", "Personalized recommendations based on your preferences", "Ability to explore the app and its features without any cost"],
+        title: "📢 Experience Digital Marketing That Delivers",
+        description: "Reach the right audience, with the right message, at the right time.Explore how our digital marketing strategies drive real engagement and measurable results. From SEO to social campaigns and performance analytics, we create tailored solutions that grow your brand and boost visibility across platforms.",
+        features: ["🔹 Learn how SEO and content strategies improve search rankings ", "🔹 See how targeted ads convert clicks into customers ", "🔹 Explore campaign analytics, audience insights, and ROI reporting", "🔹 Ideal for brands ready to scale their online presence and engagement"],
     },
 ];
 
@@ -35,7 +32,7 @@ const Pricing = () => {
                     </div>
                 </div>
 
-                <Heading tag="Get started with OpenAI" title="Pay once, use forever" />
+                <Heading tag="Custom Solutions. Trusted Team." title="Hire a Developer" />
 
                 <div className="relative">
                     <div className="flex gap-[1rem] max-lg:flex-wrap">
