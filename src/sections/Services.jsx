@@ -50,21 +50,21 @@ const Services = () => {
 
                     <div className="relative z-1 grid gap-5 lg:grid-cols-2">
                         <div className="relative min-h-[39rem] border border-white/10 rounded-3xl overflow-hidden">
-                            
-                            <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                                <h4 className="h4 mb-4">What is Digital Transformation</h4>
-                                <ul className="body-2">
-                                    <li className="flex items-start py-4 border-t border-n-6">
-                                        <img width={24} height={24} src={check} />
-                                        <p className="ml-4">Increasing technological and customer evolution is compelling organizations to stay agile, innovative, and transparent. </p>
+
+                            <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-8 lg:p-15 bg-gradient-to-b from-n-8/0 to-n-8/90">
+                                <h4 className="h4 mb-4 text-lg md:text-xl lg:text-2xl">What is Digital Transformation</h4>
+                                <ul className="body-2 text-sm md:text-base lg:text-lg">
+                                    <li className="flex items-start py-2 border-t border-n-6">
+                                        <img width={24} height={24} src={check} alt="check" />
+                                        <p className="ml-2 md:ml-4">Technology and customer demands are driving agile, innovative change.</p>
                                     </li>
-                                    <li className="flex items-start py-4 border-t border-n-6">
-                                        <img width={24} height={24} src={check} />
-                                        <p className="ml-4">Digital transformation enables companies to integrate digital technology into every aspect of their business, resulting in significant changes to the way they operate and deliver value to their customers. The process facilitates the digitalization of existing traditional processes by gathering, analyzing, and leveraging data in real time to optimize processes, automate systems, and propel innovation. </p>
+                                    <li className="flex items-start py-2 border-t border-n-6">
+                                        <img width={24} height={24} src={check} alt="check" />
+                                        <p className="ml-2 md:ml-4">Digital transformation reshapes how businesses operate and deliver value through automation, data, and innovation.</p>
                                     </li>
-                                    <li className="flex items-start py-4 border-t border-n-6">
-                                        <img width={24} height={24} src={check} />
-                                        <p className="ml-4">With years of experience and wide-ranging expertise in technologies like AI, IoT, and Data Analytics, we help you transform into a true Digital Enterprise. Our smart digital transformation solutions enable you to harness the unlimited power of data by obtaining valuable insights to meet the ever-evolving customer needs and facilitate strategic decision-making. </p>
+                                    <li className="flex items-start py-2 border-t border-n-6">
+                                        <img width={24} height={24} src={check} alt="check" />
+                                        <p className="ml-2 md:ml-4">With years of experience and wide-ranging expertise in technologies like AI, IoT, and Data Analytics, we help you transform into a true Digital Enterprise. Our smart digital transformation solutions enable you to harness the unlimited power of data by obtaining valuable insights to meet the ever-evolving customer needs and facilitate strategic decision-making.</p>
                                     </li>
                                 </ul>
                             </div>

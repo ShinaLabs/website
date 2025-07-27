@@ -1,7 +1,7 @@
 import { file02, heroBackground, homeSmile, loading, plusSquare, searchMd, yourlogo } from "../assets";
 import Button from "../components/Button";
-import robot1 from "../assets/hero/robot1.png";
-import robot2 from "../assets/hero/robot2.png";
+import robot1 from "../assets/hero/robot1.jpg";
+import robot2 from "../assets/hero/robot2.jpg";
 import robot from "../assets/hero/robot.jpg";
 import Section from "../components/Section";
 import { MouseParallax, ScrollParallax } from "react-just-parallax";
