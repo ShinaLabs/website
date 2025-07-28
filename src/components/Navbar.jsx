@@ -7,31 +7,32 @@ import { useState } from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa"; // Importing icons
 
 const navigation = [
+    
     {                   // ADD AN ANCHOR TAG TO THE NAVIGATION
         id: "0",
         title: "HOME",
-        url: "#Home",
+        url: "#home",
         
     },
     {
         id: "1",
-        title: "ABOUT US",
-        url: "./Footer",
+        title: "SERVICES",
+        url: "#services",
     },
     {
         id: "2",
-        title: "NEWS",
-        url: "#news",
+        title: "INDUSTRIES",
+        url: "#industries",
     },
     {
         id: "3",
-        title: "PRODUCTS",
-        url: "#products",
+        title: "WHAT WE DO",
+        url: "#milestones",
     },
     {
         id: "4",
-        title: "CLIENTS",
-        url: "#clients",
+        title: "HIRE A DEVELOPER",
+        url: "#hiring",
     },
     {
         id: "5",
@@ -40,30 +41,17 @@ const navigation = [
     },
     {
         id: "6",
-        title: "SERVICES",
-        url: "#services",
+        title: "ABOUT US",
+        url: "#Footer",
+        
     },
     {
         id: "7",
         title: "CONTACT US",
-        url: "#contact us",
+        url: "#contact-us",
     },
-    {
-        id: "8",
-        title: "BLOGS",
-        url: "#blogs",
-    },
-    {
-        id: "9",
-        title: "CAREERS",
-        url: "#careers",
-    },
-    {
-        id: "10",
-        title: "REFER AND EARN",
-        url: "#refer and earn",
-        onlyMobile: true,
-    },
+
+
 ];
 
 const Header = () => {
@@ -95,7 +83,7 @@ const Header = () => {
     return (
         <div className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}>
             <div className="flex flex-col lg:flex-row items-center justify-between px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-                <a className="block w-[12rem] xl:mr-8" href="#hero">
+                <a className="block w-[12rem] xl:mr-8" href="#home">
                     <img src={openai} width={250} height={40} alt="OpenAI" />
                 </a>
 

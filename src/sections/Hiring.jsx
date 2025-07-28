@@ -21,9 +21,9 @@ const pricing = [
     },
 ];
 
-const Pricing = () => {
+const Hiring = () => {
     return (
-        <Section className="overflow-hidden" id="pricing">
+        <Section className="overflow-hidden" id="hiring">
             <div className="container relative z-2">
                 <div className="hidden relative justify-center mb-[6.5rem] lg:flex">
                     <img src={smallSphere} className="relative z-1" width={255} height={255} alt="" />
@@ -76,7 +76,7 @@ const Pricing = () => {
                 </div>
 
                 <div className="flex justify-center mt-10">
-                    <a className="text-xs font-code font-bold tracking-wider uppercase border-b" href="#pricing">
+                    <a className="text-xs font-code font-bold tracking-wider uppercase border-b" href="#hiring">
                         See the full details
                     </a>
                 </div>
@@ -85,4 +85,4 @@ const Pricing = () => {
     );
 };
 
-export default Pricing;
+export default Hiring;

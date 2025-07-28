@@ -36,7 +36,7 @@ const BackgroundCircles = ({ parallaxRef }) => {
     );
 };
 
-const Hero = () => {
+const Home = () => {
     const parallaxRef = useRef(null);
 
     const sliderSettings = {
@@ -51,7 +51,7 @@ const Hero = () => {
     };
 
     return (
-        <Section className="pt-[12rem] -mt-[5.25rem]" crosses crossesOffset="lg:translate-y-[5.25rem]" customPaddings id="hero">
+        <Section className="pt-[12rem] -mt-[5.25rem]" crosses crossesOffset="lg:translate-y-[5.25rem]" customPaddings id="home">
             <div className="container relative" ref={parallaxRef}>
                 {/* Slideshow */}
                 <div className="relative max-w-[55rem] mx-auto md:max-w-5xl xl:mb-24">
@@ -96,4 +96,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default Home;
