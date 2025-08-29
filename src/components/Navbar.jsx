@@ -1,17 +1,16 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import { background, openai } from "../assets";
-import Button from "./Button";
+import { background } from "../assets";
+import logo2 from "../assets/logo2.png";
 import MenuSvg from "../assets/svg/MenuSvg";
-import { useState } from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa"; // Importing icons
+import { useEffect, useState } from "react";
 
 const navigation = [
     
-    {                   // ADD AN ANCHOR TAG TO THE NAVIGATION
+    {                  
         id: "0",
         title: "HOME",
-        url: "#home",
+        url: "/",
         
     },
     {
@@ -36,13 +35,13 @@ const navigation = [
     },
     {
         id: "5",
-        title: "TECHNOLOGY",
-        url: "#technology",
+        title: "BLOGS",
+        url: "/blog",
     },
     {
         id: "6",
         title: "ABOUT US",
-        url: "#Footer",
+        url: "#about",
         
     },
     {
@@ -54,7 +53,7 @@ const navigation = [
 
 ];
 
-const Header = () => {
+const Navbar = () => {
     const pathname = useLocation();
     const [openNavigation, setOpenNavigation] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -73,43 +72,44 @@ const Header = () => {
         if (!openNavigation) return;
 
         enablePageScroll();
-        setOpenNavigation(false);
+    setOpenNavigation(false);
+    setDropdownOpen(false);
     };
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
     };
 
+    // Auto-close mobile menus when switching to desktop viewport (Tailwind lg: 1024px)
+    useEffect(() => {
+        const mq = window.matchMedia('(min-width: 1024px)');
+        const onChange = (e) => {
+            if (e.matches) {
+                setOpenNavigation(false);
+                setDropdownOpen(false);
+                enablePageScroll();
+            }
+        };
+        // Ensure correct state on initial mount
+        if (mq.matches) {
+            setOpenNavigation(false);
+            setDropdownOpen(false);
+            enablePageScroll();
+        }
+        mq.addEventListener('change', onChange);
+        return () => mq.removeEventListener('change', onChange);
+    }, []);
+
     return (
         <div className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}>
             <div className="flex flex-col lg:flex-row items-center justify-between px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-                <a className="block w-[12rem] xl:mr-8" href="#home">
-                    <img src={openai} width={250} height={40} alt="OpenAI" />
+                <a className="block rounded-md border border-black w-[12rem] xl:mr-8" href="#home">
+                     <img src={logo2} width={70} height={70} alt="logo" />
                 </a>
-
-                {/* Contact Numbers and Social Media Links */}
-                <div className="flex items-center justify-between w-full lg:w-auto space-x-4 py-2 bg-n-8">
-                    <div className="text-white text-xs">
-                        <span>+919682302290</span>
-                        <span> | </span>
-                        <span>contact@shinalabs.com</span>
-                    </div>
-                    <div className="flex space-x-2">
-                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white text-xs">
-                            <FaFacebookF />
-                        </a>
-                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-white text-xs">
-                            <FaTwitter />
-                        </a>
-                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white text-xs">
-                            <FaLinkedinIn />
-                        </a>
-                    </div>
-                </div>
 
                 <div className="relative">
                     <button onClick={toggleDropdown} className="text-white text-lg lg:hidden">
-                        <MenuSvg openNavigation={openNavigation} />
+                        <MenuSvg openNavigation={openNavigation || dropdownOpen} />
                     </button>
                     {dropdownOpen && (
                         <div className="absolute right-0 mt-2 w-48 bg-n-8 rounded-md shadow-lg z-10">
@@ -127,16 +127,16 @@ const Header = () => {
                     )}
                 </div>
 
-                <nav className={`${openNavigation ? "flex" : "hidden"} fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>
-                    <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+                <nav className={`${openNavigation ? "flex" : "hidden"} fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:bg-transparent lg:max-w-full lg:overflow-x-auto`} aria-label="Primary">
+                    <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row lg:flex-wrap lg:gap-x-4 xl:gap-x-6">
                         {navigation.map((item) => (
                             <a
                                 key={item.id}
                                 href={item.url}
                                 onClick={handleClick}
-                                className={`block relative font-code text-lg uppercase text-white transition-colors hover:text-color-1 ${item.onlyMobile ? "lg:hidden" : ""} px-6 py-4 md:py-6 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                                className={`block relative font-code text-lg uppercase text-white transition-colors hover:text-color-1 ${item.onlyMobile ? "lg:hidden" : ""} px-6 py-4 md:py-6 lg:px-4 lg:py-4 xl:px-6 lg:text-xs lg:font-semibold ${
                                     item.url === pathname.hash ? "z-2 lg:text-white" : "lg:text-white/50"
-                                } lg:leading-5 lg:hover:text-white xl:px-12`}
+                                } lg:leading-5 lg:hover:text-white`}
                             >
                                 {item.title}
                             </a>
@@ -166,4 +166,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Navbar;

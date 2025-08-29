@@ -82,9 +82,9 @@ const Industries = () => {
                         ))}
                     </ul>
 
-                    <Button>
+                    {/* <Button>
                         Hire a Team
-                    </Button>
+                    </Button> */}
 
                 </div>
 
