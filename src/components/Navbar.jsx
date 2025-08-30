@@ -103,7 +103,7 @@ const Navbar = () => {
     return (
         <div className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}>
             <div className="flex flex-col lg:flex-row items-center justify-between px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-                <a className="block rounded-md border border-black w-[12rem] xl:mr-8" href="#home">
+                <a className="block flex justify-center rounded-md w-[12rem] xl:mr-8" href="#home">
                      <img src={logo2} width={70} height={70} alt="logo" />
                 </a>
 
